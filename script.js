@@ -632,7 +632,7 @@ class Vencimento{
       `CLIENTE SOLICITOU A TROCA 14 DIAS OU MENOS ANTES DO VENCIMENTO, APÓS O FATURAMENTO OCORRER\n\n` + 
       `O BOLETO DO DIA ${data_inicio_contrato_antigo} NO VALOR DE R$ ${valor} PRECISA SER PAGO NORMALMENTE\n\n` + 
       
-      `O BOLETO SEGUINTE A VENCER SERÁ DIA ${data_proporcional} NO VALOR DE R$ ${valor_proporcional}, ONDE:\n` + 
+      `O PRÓXIMO BOLETO A VENCER SERÁ DIA ${data_proporcional} NO VALOR DE R$ ${valor_proporcional}, ONDE:\n` + 
       `FOI CALCULADO ${diferenca_contato_vencimento_antigo} DIAS DE PROPORCIONAL DO DIA ${data_proporcional} ATE ${data_nova_proxima_fatura}\n\n` +  
           
       `APÓS ESSA FATURA O CLIENTE RETORNA A PAGAR NORMALMENTE O VALOR DE R$ ${valor} ATÉ O VENCIMENTO ESCOLHIDO.\n\n` + 
