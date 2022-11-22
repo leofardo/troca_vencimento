@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>TROCA DE VENCIMENTO</title>
+</head>
+<body>
+
+    <div class="container py-5">
+      
+      
+        <div class="row">
+          <div class="col-lg-7 mx-auto">
+            <div class="bg-white rounded-lg shadow-sm p-5">
+              <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                <li class="nav-item">
+                  <button id="btn-menor-maior" data-toggle="pill" class="nav-link active rounded-pill" onclick="vencimento.alterarModo(true)">
+                                      MENOR PRA MAIOR
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button id="btn-maior-menor" data-toggle="pill" class="nav-link rounded-pill" onclick="vencimento.alterarModo(false)">
+                                      MAIOR PRA MENOR
+
+                  </button>
+                </li>
+              </ul>
+      
+      
+              <div class="tab-content">
+      
+                <div id="nav-tab-card" class="tab-pane fade show active">
+
+
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <div class="form-group">
+                        <label><span class="hidden-xs">Dia de vencimento*</span></label>
+                        <div class="input-group">
+                          <input type="number" placeholder="Antigo" name="dia_antigo" class="form-control" required>
+                          <input type="number" placeholder="Novo" name="dia_novo" class="form-control" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group mb-4">
+                        <label data-toggle="tooltip" title="Three-digits code on the back of your card">Data contato*</label>
+                        <input type="date" name="data_contato" required class="form-control">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label><span class="hidden-xs">Valor c/ desconto*</span></label>
+                        <div class="input-group">
+                          <input type="number" placeholder="Antigo" name="valor_desconto" class="form-control" required>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>            
+
+                </div>
+
+                <div class="col-md-12 mt-3 mb-2">
+                  <div class="form-group">
+                      <label for="mensagem">Mensagem</label>
+                      <textarea id="mensagem" name="message" class="form-control pt-1 pb-1 mb-3 mt-1" style="min-height: 350px;"></textarea>
+                  </div>
+
+                </div>
+
+                <button id="botao-gerar" type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm " style="width: 100px; height: 40px;" onclick="vencimento.menorMaior()"> Gerar  </button>
+                <button id="copiar" type="button" class="subscribe btn btn-secondary btn-block rounded-pill shadow-sm" style="width: 100px; height: 40px;" onclick="copiarTexto()">Copiar</button>
+
+      
+
+      
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    
+</body>
+
+<script src="./moment.js"></script> 
+<script src="./script.js"></script>
+
+</html>
